@@ -1,21 +1,22 @@
 import React from 'react';
 import Header from '../components/Header';
-
 import Footer from '../components/Footer';
+import Registration from '../components/Registration';
+
+import API_CONFIG from '../../config';
+
+const { domain, endpoints } = API_CONFIG;
 
 
 
-
-
-
-const PageNotFound = () => {
+const Contacts = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Header />
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-     
-      <h1>Page not found</h1>
+    <Registration apiDomain={domain} apiEndpoint={endpoints.http_post}></Registration>
+
 
     
       </div>
@@ -25,4 +26,4 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
+export default Contacts;
